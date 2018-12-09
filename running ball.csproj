@@ -239,6 +239,7 @@
     <Compile Include="Assets\Script\CameraController.cs" />
     <Compile Include="Assets\Script\GameContrroller.cs" />
     <Compile Include="Assets\Script\Maze.cs" />
+    <Compile Include="Assets\Script\RoadCreate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
