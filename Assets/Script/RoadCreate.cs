@@ -12,6 +12,7 @@ public class RoadCreate : MonoBehaviour {
     //预制体 障碍物2
     public GameObject Obstacle2;
     //生成基准点
+	public GameObject goal;
     public Vector3 originPoint;
     //存放预制体的容器
     private List<float> gameObjects = new List<float>();
@@ -68,22 +69,26 @@ public class RoadCreate : MonoBehaviour {
             {
                 Instantiate(Slope, originPoint + new Vector3(0, 0, 20 + 20 * i), Quaternion.identity);
             }
-            else if (x == 1.5f)
+            if (x == 1.5f)
             {
                 Instantiate(Slope, originPoint + new Vector3(0, 0, 20 + 20 * i), Quaternion.AngleAxis(180.0f, Vector3.up));
             }
-            else if (x == 2.0f)
+            if (x == 2.0f)
             {
                 Instantiate(Hollow, originPoint + new Vector3(0, 0, 20 + 20 * i), Quaternion.identity);
             }
-            else if(x==3.0f)
+            if(x==3.0f)
             {
                 Instantiate(Obstacle1, originPoint + new Vector3(0, 0, 20 + 20 * i), Quaternion.identity);
             }
-            else if(x==4.0f)
+            if(x==4.0f)
             {
                 Instantiate(Obstacle2, originPoint + new Vector3(0, 0, 20 + 20 * i), Quaternion.identity);
             }
+			if (i == count - 1) 
+			{
+				Instantiate(goal, originPoint + new Vector3(0, 0, 20 + 20 * i), Quaternion.identity);
+			}
         }
     }
 

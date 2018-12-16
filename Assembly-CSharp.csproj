@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{40148C69-7C3B-F101-6CBB-B9DE84B5EF54}</ProjectGuid>
+    <ProjectGuid>{81888D78-01E6-3FE9-1A1B-358B2168A743}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,8 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\ballmove.cs" />
+     <Compile Include="Assets\Script\Ballmove.cs" />
      <Compile Include="Assets\Script\CameraController.cs" />
+     <Compile Include="Assets\Script\GameContrroller.cs" />
+     <Compile Include="Assets\Script\Maze.cs" />
+     <Compile Include="Assets\Script\RoadCreate.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
