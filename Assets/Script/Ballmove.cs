@@ -12,8 +12,9 @@ public class Ballmove : MonoBehaviour {
 	public float wait_time;
 	public float wait_time1;
 	public float jump_rate;
+	public float bash_rate;
 	private float nextjump;
-
+	private float nextbash;
 	void Start () {
 		ball_Rigidbody = thirdpersonplayer.GetComponent<Rigidbody> ();
 
@@ -27,6 +28,13 @@ public class Ballmove : MonoBehaviour {
             nextjump = Time.time + jump_rate;
             ball_Rigidbody.AddForce(Vector3.up * 300, ForceMode.Force);
         }
+        if (Input.GetKey(KeyCode.B) && nextbash < Time.time)
+        {
+            nextbash = Time.time + bash_rate;
+            ball_Rigidbody.AddForce(Vector3.forward * 1000, ForceMode.Force);
+            //ball_Rigidbody.AddForce(Vector3.forward* (-1000), ForceMode.Force);
+        }
+
         float h = Input.GetAxis ("Horizontal"); //左右
 		float v=Input.GetAxis("Vertical");//前后
 
@@ -56,14 +64,14 @@ public class Ballmove : MonoBehaviour {
     }
     IEnumerator OnTriggerEnter(Collider other){    //踩到加速块时会使得速度变为原来的1.5倍 持续3秒
 		if (other.tag == "speedup") {
-			MoveForce = 12;
+			MoveForce *= 1.5f;
 			yield return new WaitForSeconds (wait_time);
-			MoveForce = 6;
+			MoveForce /= 1.5f;
 		}
 		if (other.tag == "slowdown") {
-			MoveForce = 0;
+			MoveForce /= 2;
 			yield return new WaitForSeconds (wait_time1);
-			MoveForce = 6;
+			MoveForce *= 2;
 		}
 		if (other.tag == "destination") {
 			flag1 = true;
