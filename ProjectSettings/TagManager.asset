@@ -11,6 +11,10 @@ TagManager:
   - ground
   - destination
   - fallen
+  - Floor
+  - Ball
+  - Wall
+  - question
   layers:
   - Default
   - TransparentFX
