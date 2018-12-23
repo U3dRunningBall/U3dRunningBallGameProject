@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Sences/Sence_randomcreate.unity
+- path: Assets/Sences/sence_Maze.unity
   isLoaded: 1
   isActive: 1

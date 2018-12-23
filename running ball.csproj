@@ -237,6 +237,9 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Ballmove.cs" />
     <Compile Include="Assets\Script\CameraController.cs" />
+    <Compile Include="Assets\Script\CreateHollowSphere.cs" />
+    <Compile Include="Assets\Script\CreateRoad_Map.cs" />
+    <Compile Include="Assets\Script\CreateTraingle.cs" />
     <Compile Include="Assets\Script\GameContrroller.cs" />
     <Compile Include="Assets\Script\Maze.cs" />
     <Compile Include="Assets\Script\RoadCreate.cs" />
